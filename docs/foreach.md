@@ -46,7 +46,7 @@ count.run(List(1, 2, 3)) == List(1, 2, 3).foldLeft(0)((n, _) => n + 1)
 
 #### Breaking out
 
-Another issue with using an `Iterator` (or a `scalaz.Traversable` for that matter) is that there is no easy way to stop the iteration / traversal when necessary (people thinking "I could use an `Exception`", please don't!).
+Another issue with using a `Iterator.foreach` (or `traverse` from `scalaz.Traversable` for that matter) is that there is no easy way to stop the iteration / traversal when necessary (people thinking "I could use an `Exception`", please don't!).
 
 The ***origami*** solution for this feels a bit ad-hoc but at least provides something better than exceptions. It is explained on [this page](breakable.md)
 
